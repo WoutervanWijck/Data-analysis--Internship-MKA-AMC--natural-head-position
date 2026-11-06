@@ -3,8 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-path = r"C:\Users\woute\OneDrive\Documenten\Technical Medicine\Jaar 2\Stage 1 MKA AMC\Technische opdracht\Resultaten_opslag\Main_result.csv" #roll_angle_results.csv als echte data gebruiken
-
+path = r"Add your path to the main csv file from the roll angle macro"
 
 df = pd.read_csv(path, sep=",", skip_blank_lines=True, quoting=3)
 
@@ -68,7 +67,7 @@ for df_ba_cond in dataframes:
 
 
 # %%Intra observer variability
-path_intra = r"C:\Users\woute\OneDrive\Documenten\Technical Medicine\Jaar 2\Stage 1 MKA AMC\Technische opdracht\Resultaten_opslag\Intra_Observer_ses2.csv"
+path_intra = r"Add your path to the second time  using the roll angle macro"
 
 df_intra = pd.read_csv(path_intra, sep=",", skip_blank_lines=True, quoting=3)
 
@@ -130,7 +129,7 @@ results_intra_cond = df_intra_wide.groupby('Conditie').agg(
 
 
 # %% Calibration plate
-path_bord = r"C:\Users\woute\OneDrive\Documenten\Technical Medicine\Jaar 2\Stage 1 MKA AMC\Technische opdracht\Resultaten_opslag\Validatie_Bord.csv"
+path_bord = r"Add your path to the roll angle macro from the calibration plate"
 bord = pd.read_csv(path_bord, sep=",", skip_blank_lines=True, quoting=3)
 df_bord = bord[['Opmerking', 'RollAngle']].copy()
 #print(df_bord.head())
